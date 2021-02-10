@@ -22,17 +22,17 @@ public class ResultsController {
     @Autowired
     private ResultsMapper mapper;
 
-    @RequestMapping(method = RequestMethod.GET, name = "getResults")
+    @RequestMapping(method = RequestMethod.GET, value = "getResults")
     public List<ResultsDto> getResults() {
         return mapper.mepToDtoList(service.getAllResults());
     }
 
-    @RequestMapping(method = RequestMethod.GET, name = "getResult")
+    @RequestMapping(method = RequestMethod.GET, value = "getResult")
     public ResultsDto getResult(Long id) throws NotFoundException {
         return mapper.mapToResultDto(service.getResult(id).orElseThrow(NotFoundException::new));
     }
 
-    @RequestMapping(method = RequestMethod.DELETE, name = "deleteResult")
+    @RequestMapping(method = RequestMethod.DELETE, value = "deleteResult")
     public void deleteResult(@RequestParam Long id) {
         service.deleteResult(id);
     }
