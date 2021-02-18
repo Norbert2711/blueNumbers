@@ -38,6 +38,7 @@ dependencies {
 	compile("org.springframework.boot:spring-boot-starter-thymeleaf")
 	compile('org.hibernate:hibernate-core:5.4.2.Final')
 
+
 }
 
 test {
