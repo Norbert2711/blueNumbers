@@ -21,7 +21,7 @@ public class Results {
     private Long id;
 
     @Column(name = "data")
-    private String data;
+    private String day;
 
     @Column(name = "type_of_patrol")
     private String patrolType;

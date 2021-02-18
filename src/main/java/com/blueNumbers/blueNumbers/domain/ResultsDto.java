@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 public class ResultsDto {
 
     private Long id;
-    private String data;
+    private String day;
     private String patrolType;
     private String name;
     private String people;
