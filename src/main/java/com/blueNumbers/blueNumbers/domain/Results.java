@@ -27,7 +27,7 @@ public class Results {
     private String patrolType;
 
     @Column(name = "nazwisko")
-    private String name;
+    private String names;
 
     @Column(name = "legitymowanych")
     private String people;
