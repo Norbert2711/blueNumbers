@@ -16,7 +16,7 @@ public class Results {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "incrementDomain")
-    @GenericGenerator(name = "incrementDomain", strategy = "increment")
+    //@GenericGenerator(name = "incrementDomain", strategy = "increment")
     @Column(name = "id")
     private Long id;
 
