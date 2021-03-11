@@ -1,6 +1,5 @@
 package com.blueNumbers.blueNumbers.controller;
 
-import com.blueNumbers.blueNumbers.domain.Results;
 import com.blueNumbers.blueNumbers.domain.ResultsDto;
 import com.blueNumbers.blueNumbers.mapper.ResultsMapper;
 import com.blueNumbers.blueNumbers.service.ResultsService;
@@ -28,13 +27,13 @@ public class ResultsController {
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "getResult")
-    public ResultsDto getResult(Long id) throws NotFoundException {
-        return mapper.mapToResultDto(service.getResult(id).orElseThrow(NotFoundException::new));
+    public ResultsDto getResult(Long resultId) throws NotFoundException {
+        return mapper.mapToResultDto(service.getResult(resultId).orElseThrow(NotFoundException::new));
     }
 
     @RequestMapping(method = RequestMethod.DELETE, value = "deleteResult")
-    public void deleteResult(@RequestParam Long id) {
-        service.deleteResult(id);
+    public void deleteResult(@RequestParam Long resultId) {
+        service.deleteResult(resultId);
     }
 
     @RequestMapping(method = RequestMethod.PUT, value = "updateResult")

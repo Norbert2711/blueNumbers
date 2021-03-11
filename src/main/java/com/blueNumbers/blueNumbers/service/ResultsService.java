@@ -18,15 +18,15 @@ public class ResultsService {
         return repository.findAll();
     }
 
-    public Optional<Results> getResult(Long id) {
+    public Optional<Results> getResult(final Long id) {
         return repository.findById(id);
     }
 
-    public Results saveResult(Results results) {
-        return repository.save(results);
+    public Results saveResult(final Results result) {
+        return repository.save(result);
     }
 
-    public void deleteResult(Long id) {
+    public void deleteResult(final Long id) {
         repository.deleteById(id);
     }
 
