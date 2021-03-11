@@ -15,7 +15,7 @@ public class ResultsMapper {
                 resultsDto.getId(),
                 resultsDto.getDay(),
                 resultsDto.getPatrolType(),
-                resultsDto.getNames(),
+                resultsDto.getNick(),
                 resultsDto.getPeople(),
                 resultsDto.getInterventions(),
                 resultsDto.getInstruction(),
@@ -33,7 +33,7 @@ public class ResultsMapper {
                 results.getId(),
                 results.getDay(),
                 results.getPatrolType(),
-                results.getNames(),
+                results.getNick(),
                 results.getPeople(),
                 results.getInterventions(),
                 results.getInstruction(),
@@ -48,7 +48,7 @@ public class ResultsMapper {
 
     public List<ResultsDto> mepToDtoList(final List<Results> resultsList) {
         return resultsList.stream()
-                .map(e -> new ResultsDto(e.getId(), e.getDay(), e.getPatrolType(), e.getNames(),
+                .map(e -> new ResultsDto(e.getId(), e.getDay(), e.getPatrolType(), e.getNick(),
                         e.getPeople(), e.getInterventions(), e.getInstruction(), e.getInstructionFor(),
                         e.getTickets(), e.getTicketsFor(), e.getNotes(), e.getVehicles(), e.getMrd5(),
                         e.getLeads()))

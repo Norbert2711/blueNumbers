@@ -13,7 +13,7 @@ public class ResultsDto {
     private Long id;
     private String day;
     private String patrolType;
-    private String names;
+    private String nick;
     private String people;
     private String interventions;
     private String instruction;
