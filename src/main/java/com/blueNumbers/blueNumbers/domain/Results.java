@@ -15,8 +15,8 @@ import javax.persistence.*;
 public class Results {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    //@GenericGenerator(name = "incrementDomain", strategy = "increment")
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "incrementDomain")
+    @GenericGenerator(name = "incrementDomain", strategy = "increment")
     @Column(name = "id")
     private Long id;
 
